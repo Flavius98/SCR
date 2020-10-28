@@ -1,4 +1,4 @@
-!bin/bash
+#!/bin/bash
 
 sudp pat update && sudo apt get upgrade -y && sudo apt install -y mutt
 
