@@ -1,0 +1,2 @@
+Zadanie 2
+Po wykonaniu się skryptów, procesy, które znajdowały się niżej w hierarchi zostały przejęte przez init ( i później tez uśmiercone), a procesy, które są wyżej pozostały.
