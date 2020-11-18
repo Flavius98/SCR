@@ -24,4 +24,4 @@ Wszystkie te polecenia są ,,dziećmi" bash'a.
 --------------------------------------------------------------------------------------------
 
 Zadanie 6
-
+Za pomocą komendy kill -SIGSTOP [PID] możemy zatrzymać proces, natomiast komenda kill -SIGCONT [PID] wznawia proces co jest równoważne komendzie fg. Za pomocą komendy bg wyświetlamy informacje o zatrzymanych procesach.
