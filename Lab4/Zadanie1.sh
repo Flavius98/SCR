@@ -2,10 +2,10 @@
 
 i=0
 
-while [1]
+while :
 do
 	echo Liczba: $i
-	((i++))
+	let "i++"
 done
 
-sleep 1s
+sleep (1)
