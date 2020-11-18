@@ -10,5 +10,5 @@ Do tego zadania wykorzystany został program z zadania 1. Po zadaniu sygnału ki
 ----------------------------------------------------------------------------------------------
 
 Zadanie 3
-
+Do wykonania tego zadania uruchomiłem program z zadania 1. Odszukałem proces przy pomocy komendy ps -A, zapoznałem się z narzędziem proc oraz odczytałem plik status.
 ----------------------------------------------------------------------------------------------
