@@ -2,11 +2,11 @@ Zadanie 1
 Po napisaniu krótkiego programu, który inkrementuje zmienną ,,i" uruchomiłem go w terminalu.
 Na screenie terminalu z uruchumioną komendą top dołączonym do sprawozdania widać, że proces(10600) znajduje się na szczycie listy ,,pożerając" 66.7% mocy obliczeniowej procesora. 
 
-Po dodaniu funkcji sleep (1) proces nie potrzebuje już tak znaczących zasobów, więc spadł o kilka miejsc na liście. Domyślne odświeżanie ekranu top to 3s, aby to zmienić należy przy uruchomionym top wciśnąc klawisz d i wtedy można zadać czestotliwość odświeżania.
+Po dodaniu funkcji sleep (1) proces nie potrzebuje już tak znaczących zasobów, więc spadł o kilka miejsc na liście. Domyślne odświeżanie ekranu top to 3s, aby to zmienić należy przy uruchomionym top wciśnąc klawisz d i wtedy można zadać częstotliwość odświeżania.
 ----------------------------------------------------------------------------------------------
 
 Zadanie 2
-
+Do tego zadania wykorzystany został program z zadania 1. Po zadaniu sygnału kill następuje wyświeltenie komunikatu zakończenia programu, po kill -14 komunikat o wstrzynmaniu (alarmowy), po kill -10 komunikat o wstrzymaniu na 1000 iteracji, a dla kill -12 nic się nie dzieje.
 ----------------------------------------------------------------------------------------------
 
 Zadanie 3
