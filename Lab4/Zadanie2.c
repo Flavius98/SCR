@@ -1,27 +1,24 @@
 #include <stdio.h>
 #include <unistd.h>
 #include <signal.h>
-#include <stdlib.h>
+
  
 void handlerA()
 {
-  printf("wykonanie podpunktu a)\n");
+  printf("zakonczenie programu\n");
   exit(0);
 }
  
 void handlerB()
 {
-  printf("wykonanie podpunktu b)\n");
+  printf("wstrzymanie programu\n");
 }
 
 void handlerC()
 {
-  printf("wykonanie podpunktu c)\n");
-  for (int i = 0; i < 100; i++)
-  {
-      printf("%d \n", i);
-      sleep(1);
-  }
+  printf("zatrzymanie na 1000 iteracji\n");
+  sleep(1)
+  i = i + 1000;
 }
 
 void handlerD(){}
@@ -33,9 +30,11 @@ int main(){
     signal(SIGUSR1, handlerC);
     signal(SIGUSR2, handlerD);
  
-    for(int i = 0;; i++)
+    while(1)
     {
-        printf("%d", i++);
+        i++;
+        printf("%d\n", i);
+
         sleep(1);  
     }
 
