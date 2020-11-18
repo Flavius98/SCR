@@ -1,5 +1,27 @@
+Zadanie 1
+-f: rozbudowuje wyświetlany opis bieżących procesów o dodatkowe
+opcje takie jak UID, PID, PPID (User ID, Process ID, Parent Process ID)
+
+-l: wyświetla opis bieżących procesów w rozszerzonym formacie.
+
+-u userlist: wybiera procesy, których efektywna nazwa użytkownika, lub ID,
+jest w userlist.
+
+-p pidlist: wybiera procesy, których identyfikator pojawia się w pidlist.
+
+-t ttylist: wybiera procesy, które są podłączone do terminali podanych w ttylist.
+
+------------------------------------------------------------------------------------------
+
 Zadanie 2
-Po wykonaniu się skryptów (skrypt1, skrypt2, skrypt3), procesy, które znajdowały się niżej w hierarchi zostały przejęte przez init ( i później tez uśmiercone), a procesy, które są wyżej pozostały.
+Po wykonaniu się skryptów, procesy, które znajdowały się niżej w hierarchi zostały przejęte przez init ( i później tez uśmiercone), a procesy, które są wyżej pozostały.
+
+--------------------------------------------------------------------------------------------
 
 Zadanie 3
 Wszystkie te polecenia są ,,dziećmi" bash'a.
+
+--------------------------------------------------------------------------------------------
+
+Zadanie 6
+
