@@ -11,7 +11,7 @@ jest w userlist.
 
 -t ttylist: wybiera procesy, które są podłączone do terminali podanych w ttylist.
 
-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 
 Zadanie 2
 Po wykonaniu się skryptów, procesy, które znajdowały się niżej w hierarchi zostały przejęte przez init ( i później tez uśmiercone), a procesy, które są wyżej pozostały.
@@ -25,3 +25,14 @@ Wszystkie te polecenia są ,,dziećmi" bash'a.
 
 Zadanie 6
 Za pomocą komendy kill -SIGSTOP [PID] możemy zatrzymać proces, natomiast komenda kill -SIGCONT [PID] wznawia proces co jest równoważne komendzie fg. Za pomocą komendy bg wyświetlamy informacje o zatrzymanych procesach.
+
+--------------------------------------------------------------------------------------------
+
+Zadanie 7
+Za pomocą polecenia nice, możemy nadać priosytet danemu procesowi w trakcie jego uruchomienia.
+Przykład: nice -n 5 Zadanie3.sh
+
+Natomiast za pomocą polecenia renice, możemy nadać priorytet już w trakcie jego działania
+renice -n 0 3836 
+
+
