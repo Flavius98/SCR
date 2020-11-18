@@ -10,7 +10,7 @@ int main()
     while(1)
     {
         i++;
-        std::cout << i;
+        std::cout << i << std::endl;
     }
 
     sleep (1);
