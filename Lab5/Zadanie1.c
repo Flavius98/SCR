@@ -4,28 +4,37 @@
 
 #define MAX_BUFFOR 64
 
-
-
 int main(int argc , char* argv[])
 {
 
-int pidNum;
-int fileDescNumb[2];
+    int pidNum;
+    int fileDescNum[2];
 
-pipe(fileDescNumb);
+    pipe(fileDescNum);
 
-pidNumb = fork();
+    pidNum = fork();
 
-if (pidNumb)
-{
+    if (pidNum)
+    {
+        char bufor[MAX_BUFFOR];
 
-   
-}
-else
-{
- 
-}
+        while (read(fileDescNum[0], bufor, MAX_BUFFOR))
+        {
+            if (bufor[MAX_BUFFOR - 1] == 0)
+               
+        
+               
+        }
+    }
 
+    else
+    {
+        FILE *f = fopen(argv[1],"r");
+        char buffor[MAX_BUFFOR];
 
+        
+
+        fclose(f);  
+    }
 
 }
