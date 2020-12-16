@@ -11,40 +11,34 @@
 
 int main()
 {
-int file;
-struct stat filestat;
-char *file_in_memory;
-int file_size;
 
-     while(1) 
-     {
+   int file;
+   char image[100];
+   struct stat filestat;
+   char *file_in_memory;
+   int file_size;
 
-        if(fork() == 0) 
+   while(1) 
+   {
+      if(fork() == 0) 
       {
-        
-            execlp("display", " ", "-update", "1", "plik", NULL);
+         sleep(2);
+         execlp("display", " ", "-update", "1", "plik", NULL);
       }
 
-	printf("name of file:\n");
-        scanf("%s", image);
+	   printf("name of file:\n");
+      scanf("%s", image);
 
-     
+      if(( file = open(image, O_RDWR, S_IRWXO | S_IWUSR)) < 0 ) printf("cant open file");
+         file_size= open("file", O_RDWR | O_CREAT);  
+
+      truncate("plik", filestat.st_size);
+      file_in_memory = mmap(NULL, filestat.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, file_size, 0 );
+
+      read(file, file_in_memory,filestat.st_size);
     
-    if(fstat(file, &filestat) < 0) {
-	    printf("error");
-	    return(1);
-      }
-
-
-    truncate("plik", filestat.st_size);
-    file_in_memory = mmap(NULL, filestat.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, file_size, 0 );
-
-    read(file, file_in_memory,filestat.st_size);
-
- 
-    
-    close(file);
-
-    }
+      close(file);
+   }
+}
 
 
