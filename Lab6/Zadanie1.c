@@ -31,11 +31,21 @@ int main()
 
       if(( file = open(image, O_RDWR, S_IRWXO | S_IWUSR)) < 0 ) printf("cant open file");
          file_size= open("file", O_RDWR | O_CREAT);  
+    
+      if(fstat(file, &filestat) < 0) 
+      {
+	      printf("error");
+	      return(1);
+      }
 
       truncate("plik", filestat.st_size);
       file_in_memory = mmap(NULL, filestat.st_size, PROT_READ | PROT_WRITE, MAP_SHARED, file_size, 0 );
 
       read(file, file_in_memory,filestat.st_size);
+
+      msync(file_in_memory, filestat.st_size, MS_SYNC);
+    
+      munmap(file_in_memory, filestat.st_size);
     
       close(file);
    }
